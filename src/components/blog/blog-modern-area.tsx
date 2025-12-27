@@ -71,7 +71,7 @@ const process_data: ProcessItemType[] = [
     img: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1200&q=80",
     details:
       "Comprehensive quality checks for strength, color fastness, and dimensional stability.",
-    order: "06",
+    order: "",
   },
 ]
 

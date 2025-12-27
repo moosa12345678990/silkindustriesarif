@@ -31,7 +31,7 @@ export default function MobileMenus() {
               <a className="pointer" onClick={() => openMobileMenu(menu.title)}>
                 {menu.title}
                 <button className="dropdown-toggle-btn">
-                  <i className="fa-light fa-plus"></i>
+                  {/* <i className="fa-light fa-plus"></i> */}
                 </button>
               </a>
               {menu.home_menus ? (
@@ -42,11 +42,11 @@ export default function MobileMenus() {
                         {menu.home_menus.map((hm, i) => (
                           <div key={i} className="col homemenu">
                             <div className="homemenu-thumb-wrap mb-20">
-                              <div className="homemenu-thumb fix">
+                              {/* <div className="homemenu-thumb fix">
                                 <Link href={hm.link}>
                                   <Image src={hm.img} alt={hm.title} width={512} height={480} style={{ height: "100%" }} />
                                 </Link>
-                              </div>
+                              </div> */}
                             </div>
                             <div className="homemenu-content text-center">
                               <h4 className="homemenu-title">
