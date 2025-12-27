@@ -1,60 +1,67 @@
-import $ from "jquery";
-import { gsap, Power2 } from "gsap";
+import $ from "jquery"
+import { gsap } from "gsap"
+
 function hoverBtn() {
+  /* ================= CIRCLE DOT FOLLOW ================= */
+  $(".tp-hover-btn").on("mouseenter mouseout", function (e: any) {
+    const offset = $(this).offset()
+    if (!offset) return
 
-  $('.tp-hover-btn').on('mouseenter', function (e: any) {
-    let x = e.pageX - $(this).offset()!.left;
-    let y = e.pageY - $(this).offset()!.top;
+    const x = e.pageX - offset.left
+    const y = e.pageY - offset.top
 
-    $(this).find('.tp-btn-circle-dot').css({
+    $(this).find(".tp-btn-circle-dot").css({
       top: y,
-      left: x
-    });
-  });
+      left: x,
+    })
+  })
 
-  $('.tp-hover-btn').on('mouseout', function (e: any) {
-    let x = e.pageX - $(this).offset()!.left;
-    let y = e.pageY - $(this).offset()!.top;
+  /* ================= PARALLAX BUTTON ================= */
+  const hoverBtns = gsap.utils.toArray<HTMLElement>(".tp-hover-btn-wrapper")
+  const hoverBtnItems = gsap.utils.toArray<HTMLElement>(".tp-hover-btn-item")
 
-    $(this).find('.tp-btn-circle-dot').css({
-      top: y,
-      left: x
-    });
-  });
+  hoverBtns.forEach((btn, i) => {
+    const item = hoverBtnItems[i]
+    if (!item) return
 
-  const hoverBtns = gsap.utils.toArray(".tp-hover-btn-wrapper");
+    $(btn).on("mousemove", (e: any) => {
+      parallaxIt(e, btn, item, 60)
+    })
 
-  const hoverBtnItem: any = gsap.utils.toArray(".tp-hover-btn-item");
-  hoverBtns.forEach((btn: any, i) => {
-    $(btn).mousemove(function (e) {
-      callParallax(e);
-    });
-    function callParallax(e: any) {
-      parallaxIt(e, hoverBtnItem[i], 60);
-    }
-
-    function parallaxIt(e: any, target: any, movement: any) {
-      const $this: any = $(btn);
-      const relX = e.pageX - $this.offset().left;
-      const relY = e.pageY - $this.offset().top;
-
-      gsap.to(target, 1, {
-        x: ((relX - $this.width() / 2) / $this.width()) * movement,
-        y: ((relY - $this.height() / 2) / $this.height()) * movement,
-        ease: Power2.easeOut,
-      });
-    }
-    $(btn).mouseleave(function (e) {
-      gsap.to(hoverBtnItem[i], 1, {
+    $(btn).on("mouseleave", () => {
+      gsap.to(item, {
+        duration: 1,
         x: 0,
         y: 0,
-        ease: Power2.easeOut,
-      });
-    });
-  });
-};
+        ease: "power2.out",
+      })
+    })
+  })
 
+  /* ================= PARALLAX FUNCTION ================= */
+  function parallaxIt(
+    e: any,
+    btn: HTMLElement,
+    target: HTMLElement,
+    movement: number
+  ) {
+    const $btn = $(btn)
+    const offset = $btn.offset()
+    if (!offset) return
 
-export {
-  hoverBtn,
+    const relX = e.pageX - offset.left
+    const relY = e.pageY - offset.top
+
+    const width = $btn.width() || 1
+    const height = $btn.height() || 1
+
+    gsap.to(target, {
+      duration: 1,
+      x: ((relX - width / 2) / width) * movement,
+      y: ((relY - height / 2) / height) * movement,
+      ease: "power2.out",
+    })
+  }
 }
+
+export { hoverBtn }
