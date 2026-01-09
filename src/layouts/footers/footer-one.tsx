@@ -113,15 +113,9 @@ export default function FooterOne() {
           <div className="tp-copyright-wrap">
             <div className="row align-items-center">
               <div className="col-xl-6 col-md-4">
-<<<<<<< HEAD
                 <div className="">
                   <Link href="/">
                     <Image src={logo} alt="logo"  width={200} height={200}/>
-=======
-                <div className="tp-copyright-logo text-center text-md-start">
-                  <Link href="/">
-                    <Image src={logo} alt="logo" />
->>>>>>> dee6b851c96f66a0b5fffb4588937b5f872992ec
                   </Link>
                 </div>
               </div>

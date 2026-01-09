@@ -25,15 +25,9 @@ export default function MobileOffcanvas({ openOffcanvas, setOpenOffcanvas }: IPr
       <div className={`tp-offcanvas-area ${openOffcanvas ? "opened" : ""}`}>
         <div className="tp-offcanvas-wrapper">
           <div className="tp-offcanvas-top d-flex align-items-center justify-content-between">
-<<<<<<< HEAD
             <div className="">
               <Link href="#">
                 <Image src={logo} alt="logo" width={150} height={150} />
-=======
-            <div className="tp-offcanvas-logo">
-              <Link href="#">
-                <Image src={logo} alt="logo" />
->>>>>>> dee6b851c96f66a0b5fffb4588937b5f872992ec
               </Link>
             </div>
             <div className="tp-offcanvas-close">

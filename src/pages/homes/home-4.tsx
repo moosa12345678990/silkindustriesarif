@@ -87,11 +87,7 @@ const HomeFourMain = () => {
   });
 
   return (
-<<<<<<< HEAD
     <>
-=======
-    <Wrapper>
->>>>>>> dee6b851c96f66a0b5fffb4588937b5f872992ec
 
       {/* header area start */}
       <HeaderFour />
@@ -139,13 +135,8 @@ const HomeFourMain = () => {
           {/* footer area */}
         </div>
       </div>
-<<<<<<< HEAD
   
 </>
-=======
-    </Wrapper>
-
->>>>>>> dee6b851c96f66a0b5fffb4588937b5f872992ec
     
   );
 };

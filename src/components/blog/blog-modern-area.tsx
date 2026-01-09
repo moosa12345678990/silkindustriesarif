@@ -142,7 +142,7 @@ const ProcessItem: React.FC<ProcessItemProps> = ({ item }) => {
           align-items: center;
           justify-content: center;
           font-weight: 800;
-          font-size: 20px;
+       
           z-index: 2;
           box-shadow: 0 4px 12px rgba(181, 211, 52, 0.3);
           transition: all 0.3s ease;
@@ -164,13 +164,7 @@ const ProcessItem: React.FC<ProcessItemProps> = ({ item }) => {
           width: 100%;
           height: 100%;
         }
-
-        .process-img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          transition: transform 0.6s ease;
-        }
+    
 
         .process-item-inner:hover .process-img {
           transform: scale(1.05);
@@ -296,7 +290,7 @@ const ManufacturingProcess: React.FC = () => {
       <style jsx global>{`
         .manufacturing-process {
           padding: 100px 0;
-          background: linear-gradient(180deg, #f8faf0 0%, #ffffff 100%);
+    
           position: relative;
           overflow: hidden;
           margin-top: 80px;
