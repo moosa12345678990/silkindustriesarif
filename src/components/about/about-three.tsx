@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 // internal imports
-import shape from '@/assets/img/home-03/about/ab-shape-img.png';
+import shape from '@/assets/img/ceoimg.png';
 import { ArrowBg, RightArrowTwo, FirstBracket, FirstBracketTwo } from "../svg";
 
 export default function AboutThree() {
@@ -35,13 +35,13 @@ export default function AboutThree() {
         </div>
         <div className="row align-items-center">
           <div className="col-xl-6 col-lg-6 col-md-4">
-            <div className="tp-about-3-shape text-lg-end">
+            <div className=" text-lg-end">
               <Image 
                 src={shape} 
                 alt="shape" 
                 style={{ 
                   height: "auto",
-                  filter: "invert(67%) sepia(33%) saturate(836%) hue-rotate(34deg) brightness(93%) contrast(88%)"
+             
                 }} 
               />
             </div>

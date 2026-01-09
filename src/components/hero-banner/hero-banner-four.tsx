@@ -49,12 +49,12 @@ export default function HeroBannerFour() {
                 className="tp-btn-black-2"
                 href="/contact"
                 style={{
-                  backgroundColor: "#b5d334",
-                  color: "#000",
-                  borderColor: "#b5d334",
+                  backgroundColor: "#000000ff",
+                  color: "#ffffffff",
+                  borderColor: "#000000ff",
                 }}
               >
-                Say Hello{" "}
+                Contact Us{" "}
                 <span className="p-relative">
                   <RightArrowTwo />
                   <ArrowBg />
