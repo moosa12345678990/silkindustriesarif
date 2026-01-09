@@ -33,7 +33,13 @@ const HeaderMenus = () => {
                           </div>
                         </div>
                         <div className="homemenu-content text-center">
-                          <h4 className="homemenu-title">
+                          <h4 className="homemenu-title" style={{
+    color: "#ffffff",
+    fontWeight: 600,
+    textTransform: "uppercase",
+    letterSpacing: "0.5px",
+    fontSize: "15px",
+  }}>
                             <Link 
                               href={home_menu.link}
                               className="homemenu-link"
