@@ -1,12 +1,16 @@
 import React from "react";
 import Link from "next/link";
-import menu_data from "@/data/menu-data";
+import menu_data, { mobile_menu_data } from "@/data/menu-data";
 
 export default function MobileMenus() {
+  // Use mobile_menu_data if you want different mobile menu items
+  // or use menu_data if you want the same menu for both
+  const menusToDisplay = mobile_menu_data; // or menu_data
+
   return (
     <nav className="mobile-menu-simple">
       <ul className="mobile-menu-list">
-        {menu_data.map((menu) => (
+        {menusToDisplay.map((menu) => (
           <li key={menu.id} className="mobile-menu-item">
             <Link href={menu.link} className="mobile-menu-link">
               {menu.title}
