@@ -1,7 +1,7 @@
 import React from "react"
 import Image from "next/image"
 import Link from "next/link"
-
+import a from "@/assets/img/a.png"
 /* ================= TYPES ================= */
 
 interface ProcessItemType {
@@ -51,7 +51,7 @@ const process_data: ProcessItemType[] = [
     id: 4,
     title: "Designing",
     description: "Creating patterns and textile designs",
-    img: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1200&q=80",
+    img: "/assets/img/a.png",
     details:
       "Innovative patterns and textures using both traditional and digital design methodologies.",
     order: "04",
